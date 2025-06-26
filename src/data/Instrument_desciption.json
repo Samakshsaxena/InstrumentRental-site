@@ -1,0 +1,49 @@
+    {
+        "Description": [
+            {
+                "id": "1",
+                "name": "Acoustic Guitar",
+                "category": "String",
+                "pricePerDay": 150,
+                "availability": true,
+                "image": "guitar.jpg",
+                "description": "A high-quality 6-string acoustic guitar perfect for beginners and intermediate players. Comes with a padded case and extra picks."
+            },
+            {
+                "id": "2",
+                "name": "Electric Guitar",
+                "category": "String",
+                "pricePerDay": 200,
+                "availability": true,
+                "image": "electricGuitar.jpg",
+                "description": "Strat-style electric guitar with clean tone and sharp looks. Includes amplifier, cable, and strap for plug-and-play performance."
+            },
+            {
+                "id": "3",
+                "name": "Digital Piano",
+                "category": "Keyboard",
+                "pricePerDay": 300,
+                "availability": true,
+                "image": "digiPiano.webp",
+                "description": "88-key digital piano with weighted keys and dual speakers. Comes with stand, stool, and sustain pedal. Ideal for stage and practice."
+            },
+            {
+                "id": "4",
+                "name": "Violin (Full Size)",
+                "category": "String",
+                "pricePerDay": 120,
+                "availability": true,
+                "image": "violin.jpg",
+                "description": "Full-size student violin with bow, rosin, and carry case. Tuned and maintained for a great sound and smooth playability."
+            },
+            {
+                "id": "6",
+                "name": "Drum Kit (5-Piece)",
+                "category": "Percussion",
+                "pricePerDay": 400,
+                "availability": true,
+                "image": "drumkit.jpg",
+                "description": "Full drum kit including bass drum, snare, toms, cymbals, and hardware. Perfect for gigs and rehearsals. Sticks and stool included."
+            }
+        ]
+    }
