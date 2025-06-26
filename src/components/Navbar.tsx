@@ -5,7 +5,6 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useCart } from '@/context/CartContext'; // ✅ Import cart context
 
-
 function Navbar({ className }: { className?: string }) {
     const [active, setActive] = useState<string | null>(null);  
     const [userName, setUserName] = useState<string | null>(null);
@@ -43,6 +42,7 @@ function Navbar({ className }: { className?: string }) {
                         <HoveredLink href="/violin">Violin</HoveredLink>
                     </div>
                 </MenuItem>
+
                 <MenuItem
                     setActive={setActive}
                     active={active}
@@ -55,9 +55,6 @@ function Navbar({ className }: { className?: string }) {
                     }}
                 />
 
-
-
-
                 <Link href={"/cart"}>
                     <MenuItem
                         setActive={setActive}
@@ -68,10 +65,15 @@ function Navbar({ className }: { className?: string }) {
 
                 <MenuItem setActive={setActive} active={active} item="Contact Us">
                     <form
-                        onSubmit={async (e) => {    
+                        onSubmit={async (e) => {
                             e.preventDefault();
-                            const name = e.target.name.value;
-                            const email = e.target.email.value;
+                            const target = e.target as typeof e.target & {
+                                name: { value: string };
+                                email: { value: string };
+                            };
+
+                            const name = target.name.value;
+                            const email = target.email.value;
 
                             const res = await fetch("/api/sendContactEmail", {
                                 method: "POST",
